@@ -77,15 +77,16 @@ class PanResponderExample extends Component {
   // _highlight and _unHighlight get called by PanResponder methods,
   // providing visual feedback to the user.
   _highlight = () => {
-    this.circle &&
-      this.circle.setNativeProps({
-        style: { backgroundColor: CIRCLE_HIGHLIGHT_COLOR }
-      });
+    this.circle && this.circle.setNativeProps({ style: { backgroundColor: CIRCLE_HIGHLIGHT_COLOR } });
   };
 
   _unHighlight = () => {
-    this.circle &&
-      this.circle.setNativeProps({ style: { backgroundColor: CIRCLE_COLOR } });
+    this.circle && this.circle.setNativeProps({ style: { backgroundColor: CIRCLE_COLOR } });
+      /*
+      -setNativeProps -
+      애니메이션을 다룰 때는 state나 props를 지정하는 장법으로 변화를 주는 대신에
+      컴포넌트의 setNativeProps를 직접 호출하여 변화룰 줄 수 있다.
+      */
   };
 
   // We're controlling the circle's position directly with setNativeProps.

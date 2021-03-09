@@ -48,7 +48,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#F5FCFF"
   },
-  row: { fontSize: 24, padding: 42, borderWidth: 1, borderColor: "#DDDDDD" }
+  row: { 
+    fontSize: 10, 
+    padding: 42, 
+    borderWidth: 1, 
+    borderColor: "#DDDDDD",
+   }
 });
 
 export default SimpleList;

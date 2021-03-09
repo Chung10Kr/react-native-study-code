@@ -4,12 +4,12 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   parent: {
     flex: 1,
-    flexDirection: "row",
-    alignItems: "flex-end",
+    flexDirection: "column",
+    // alignItems: "flex-start",
     backgroundColor: "#F5FCFF",
     borderColor: "#0099AA",
     borderWidth: 5,
-    marginTop: 30
+    
   },
   child: {
     flex: 1,

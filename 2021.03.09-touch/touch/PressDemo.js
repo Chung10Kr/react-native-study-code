@@ -43,11 +43,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#F5FCFF"
   },
-  welcome: { fontSize: 20, textAlign: "center", margin: 10, color: "#FFFFFF" },
-  touchable: { borderRadius: 100 },
+  welcome: { fontSize: 30, textAlign: "center", margin: 10, color: "#FFFFFF" },
+  touchable: { borderRadius: 40 },
   button: {
     backgroundColor: "#FF0000",
-    borderRadius: 100,
+    borderRadius: 40,
     height: 200,
     width: 200,
     justifyContent: "center"

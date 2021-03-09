@@ -40,11 +40,12 @@ class BookList extends Component {
     // and adds a key property to the object
     // for rendering purposes
     return books.map(book => {
-      return Object.assign(book, { key: book.title });
+      return Object.assign(book, { key: book.title , });
     });
   };
 
   render() {
+    console.log( this.state.data )
     return <FlatList data={this.state.data} renderItem={this._renderItem} />;
   }
 }
@@ -52,3 +53,11 @@ class BookList extends Component {
 const styles = StyleSheet.create({ container: { flex: 1, paddingTop: 22 } });
 
 export default BookList;
+
+
+/*
+FlatList에는 반드시 고유의 값을 갖는 key 속성이 지정되어야 한다.
+
+*/
+
+

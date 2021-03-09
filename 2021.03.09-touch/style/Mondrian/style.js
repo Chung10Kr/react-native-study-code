@@ -12,12 +12,15 @@ const styles = StyleSheet.create({
   },
   base: { borderColor: "#000000", borderWidth: 5 },
   topBlock: { flexDirection: "row", flex: 5 },
+  bottomBlock: { flexDirection: "row" , flex: 2},
+
   leftCol: { flex: 2 },
-  bottomBlock: { flex: 2, flexDirection: "row" },
+  cellThree: { backgroundColor: "#FF0000", flex: 5 },
+  
   bottomRight: { flexDirection: "column", flex: 2 },
   cellOne: { flex: 1, borderBottomWidth: 15 },
   cellTwo: { flex: 3 },
-  cellThree: { backgroundColor: "#FF0000", flex: 5 },
+  
   cellFour: { flex: 3, backgroundColor: "#0000FF" },
   cellFive: { flex: 6 },
   cellSix: { flex: 1 },

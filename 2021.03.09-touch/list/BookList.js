@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 
 import BookItem from "./BookItem";
-import NYT from "./NYT";
+import NYT from "./NYT2";
 
 class BookList extends Component {
   constructor(props) {
@@ -35,9 +35,8 @@ class BookList extends Component {
   };
 
   _refreshData = () => {
-    NYT.fetchBooks().then(books => {
-      this.setState({ data: this._addKeysToBooks(books) });
-    });
+    var books = NYT.fetchBooks(); 
+    this.setState({ data: this._addKeysToBooks(books) });
   };
 
   render() {
@@ -47,6 +46,17 @@ class BookList extends Component {
       </View>
     );
   }
+
+  _renderItem = ({ item }) => {
+    return (
+      <BookItem
+        coverURL={item.book_image}
+        title={item.key}
+        author={item.author}
+      />
+    );
+  };
+
 }
 
 const styles = StyleSheet.create({ container: { flex: 1, paddingTop: 22 } });

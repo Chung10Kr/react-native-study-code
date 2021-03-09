@@ -7,6 +7,9 @@ class Mondrian extends Component {
   render() {
     return (
       <View style={styles.parent}>
+
+
+        
         <View style={styles.topBlock}>
           <View style={styles.leftCol}>
             <View style={[styles.cellOne, styles.base]} />
@@ -14,6 +17,9 @@ class Mondrian extends Component {
           </View>
           <View style={[styles.cellThree, styles.base]} />
         </View>
+
+
+
         <View style={styles.bottomBlock}>
           <View style={[styles.cellFour, styles.base]} />
           <View style={[styles.cellFive, styles.base]} />
@@ -22,6 +28,9 @@ class Mondrian extends Component {
             <View style={[styles.cellSeven, styles.base]} />
           </View>
         </View>
+
+
+
       </View>
     );
   }
