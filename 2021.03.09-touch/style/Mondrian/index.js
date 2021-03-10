@@ -9,13 +9,16 @@ class Mondrian extends Component {
       <View style={styles.parent}>
 
 
-        
+
         <View style={styles.topBlock}>
+          
           <View style={styles.leftCol}>
             <View style={[styles.cellOne, styles.base]} />
             <View style={[styles.base, styles.cellTwo]} />
           </View>
+
           <View style={[styles.cellThree, styles.base]} />
+
         </View>
 
 

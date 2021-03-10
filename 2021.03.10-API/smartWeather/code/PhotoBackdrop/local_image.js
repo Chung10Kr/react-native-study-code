@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 
-import { Image } from "react-native";
+import { Image , ImageBackground, View } from "react-native";
 
 import styles from "./style.js";
 
 class PhotoBackdrop extends Component {
   render() {
     return (
-      <Image
+      <ImageBackground
         style={styles.backdrop}
         source={require("./flowers.png")}
         resizeMode="cover"
       >
+      
         {this.props.children}
-      </Image>
+      
+      </ImageBackground>
     );
   }
 }
