@@ -1,55 +1,20 @@
 import React from 'react';
-import PropTypes from "prop-types";
-import axios from  "axios";
-import Movie from "./movie";
-import "./App.css";
+import {BrowserRouter , Route } from "react-router-dom";
+import About from "./routes/About";
+import Home from "./routes/Home";
+import detail from "./routes/detail";
+import Navigation from "./components/Navigation"
 
-class App extends React.Component{
-  constructor(props ){
-    super(props)
-  };
-  state ={
-    isLoading : true,
-    movies : []
-  };
-  getMovies = async () =>{
-    const {data: {data : {movies}}} = await axios.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json");
-    console.log( movies )
-    this.setState({isLoading:false , movies });
-  };
-  componentDidMount(){
-    this.getMovies();
-  };
-  render(){
-    console.log("render")
-    const {isLoading , movies } = this.state;
+function App(){
     return (
-      
-      <section className="container">
-        {
-         isLoading ? (
-          <div className="loader"><span className="loader_text">Loading...</span></div>
-         )
-          
-        : (
-          <div className="movies">
-              {movies.map(movie => {
-                return <Movie 
-                        key     ={movie.id}
-                        id     ={movie.id}
-                        year   ={movie.year}
-                        title  ={movie.title}
-                        summary  ={movie.summary}
-                        poster={movie.medium_cover_image}
-                        genres={movie.genres}
-                        
-                        />
-              })}
-          </div>)
-        }
-      </section>
+    <BrowserRouter>
+      <Navigation/>
+      <Route path="/" exact={true} component={Home}/>
+      <Route path="/about"  component={About}/>
+      <Route path="/movie/:id"  component={detail}/>
+    </BrowserRouter>
+
     )
-  }
 }
 
 export default App;
